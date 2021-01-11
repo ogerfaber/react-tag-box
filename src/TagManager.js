@@ -6,14 +6,14 @@ export default class TagManager {
   }
 
   execute(action) {
-    this.event.preventDefault()
+    // this.event.preventDefault()
     action()
   }
 
   prev() {
-    if (this.tagBoxData.considering) {
-      this.execute(() => this.tagBox.autocomplete.considerPrevious())
-    }
+    this.execute(() => this.tagBox.autocomplete.considerPrevious())
+    // if (this.tagBoxData.considering) {
+    // }
   }
 
   next() {
